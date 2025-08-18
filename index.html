@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CompanionAI — Pink Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated Pink Jelly Background -->
+  <div class="bg">
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+  </div>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <button id="sidebarToggle" class="hamburger" aria-label="Toggle Sidebar"><span></span><span></span><span></span></button>
+    <div class="brand"><div class="orb"></div><span>Companion AI</span></div>
+    <div class="persona-quick">
+      <label for="personaSelect">Mode</label>
+      <select id="personaSelect">
+        <option value="companion" selected>Companion</option>
+        <option value="coach">Wellness Coach</option>
+        <option value="assistant">Task Assistant</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <button id="closeSidebar" class="close-btn" aria-label="Close sidebar">×</button>
+
+    <div class="sidebar-inner">
+      <div class="profile-card">
+        <div class="avatar-3d">
+          <div class="ring"></div>
+          <img src="https://ui-avatars.com/api/?name=G&background=ff66b2&color=fff" alt="avatar"/>
+        </div>
+        <div class="profile-info">
+          <h3 id="userName">Guest</h3>
+          <p id="userEmail">guest@example.com</p>
+        </div>
+        <button id="loginDemo" class="btn-outline">Demo Login</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="history">
+        <div class="history-head">
+          <h4>Chat History</h4>
+          <button id="newChat" class="btn-mini">New</button>
+        </div>
+        <ul id="historyList" class="history-list"></ul>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="sidebar-settings">
+        <h4>Persona</h4>
+        <div class="persona-options">
+          <label><input type="radio" name="personaRadio" value="companion" checked/> Companion</label>
+          <label><input type="radio" name="personaRadio" value="coach"/> Wellness Coach</label>
+          <label><input type="radio" name="personaRadio" value="assistant"/> Task Assistant</label>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- Character Selection Screen -->
+<div id="characterSelect" class="character-select">
+  <h2>Choose Your Saras</h2>
+  <div class="characters">
+    <div class="character" data-role="teacher">
+      <img src="https://i.pravatar.cc/100?img=47" alt="Teacher">
+      <p>Teacher</p>
+    </div>
+    <div class="character" data-role="mental-doctor">
+      <img src="https://i.pravatar.cc/100?img=12" alt="Mental Doctor">
+      <p>Doctor</p>
+    </div>
+    <div class="character" data-role="stress-reliever">
+      <img src="https://i.pravatar.cc/100?img=32" alt="Stress Reliever">
+      <p>Stress Reliever</p>
+    </div>
+    <div class="character" data-role="girl-knowledge">
+      <img src="https://i.pravatar.cc/100?img=25" alt="Girl Knowledge">
+      <p>personal asistance</p>
+    </div>
+    <div class="character" data-role="GPT">
+      <img src="https://i.pravatar.cc/100?img=5" alt="GPT">
+      <p>GPT</p>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Main chat -->
+  <main class="main">
+    <div id="chat" class="chat"></div>
+
+    <div class="inputbar" id="inputbar">
+      <input id="msg" type="text" placeholder="Type your message…" autocomplete="off" />
+      <button id="send" class="glow-btn">Send</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
